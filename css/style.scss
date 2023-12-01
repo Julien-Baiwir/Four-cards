@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body{
-    overflow: hidden;
     height:800px;
     width: 1440px;
     font-family: 'Open Sans', sans-serif;
@@ -95,3 +94,12 @@ img{
     @include border-styling(hsl(212, 86%, 64%), 0.3); 
   }
   
+//   ---------------------------------
+
+//   @media only screen and (max-width: 375px) {
+//     .body {
+//       display: flex;
+//       flex-direction: column;
+//     }
+    
+//   }
