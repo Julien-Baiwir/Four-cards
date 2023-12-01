@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  overflow: hidden;
+  height: 800px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+body h1 {
+  font-size: 18px;
+  color: hsl(234, 12%, 34%);
+  font-weight: 400;
+}
+body h2 {
+  font-size: 19px;
+  color: hsl(234, 76%, 8%);
+  font-weight: 600;
+}
+body h4 {
+  font-size: 14px;
+  color: hsla(234, 12%, 34%, 0.5);
+  font-weight: 200;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 33%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(29, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  border: 2px solid black;
+  height: 67%;
+}
+
+.element1 {
+  grid-column: 4/span 7;
+  grid-row: 5/span 6;
+}
+
+.element4 {
+  grid-column: 20/span 7;
+  grid-row: 5/span 6;
+}
+
+.element2 {
+  grid-column: 12/span 7;
+  grid-row: 2/span 6;
+}
+
+.element3 {
+  grid-column: 12/span 7;
+  grid-row: 9/span 6;
+}
+
+.element1 {
+  border-top: 3px solid hsl(180, 62%, 55%);
+  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
+}
+
+.element2 {
+  border-top: 3px solid hsl(0, 78%, 62%);
+  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
+}
+
+.element3 {
+  border-top: 3px solid hsl(34, 97%, 64%);
+  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
+}
+
+.element4 {
+  border-top: 3px solid hsl(212, 86%, 64%);
+  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
+}/*# sourceMappingURL=style.css.map */
