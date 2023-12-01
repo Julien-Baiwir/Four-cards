@@ -2,23 +2,28 @@
 body {
   overflow: hidden;
   height: 800px;
+  width: 1440px;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
 }
 body h1 {
-  font-size: 18px;
+  font-size: 26px;
   color: hsl(234, 12%, 34%);
   font-weight: 400;
+  margin: 40px 0px 0px;
 }
 body h2 {
-  font-size: 19px;
-  color: hsl(234, 76%, 8%);
+  font-size: 28px;
+  color: hsl(235, 86%, 17%);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   font-weight: 600;
+  margin-top: 0px;
 }
 body h4 {
-  font-size: 14px;
+  font-size: 16px;
   color: hsla(234, 12%, 34%, 0.5);
   font-weight: 200;
+  margin: 0px;
 }
 
 header {
@@ -26,15 +31,36 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 33%;
+  height: 25%;
 }
 
 main {
   display: grid;
   grid-template-columns: repeat(29, 1fr);
   grid-template-rows: repeat(16, 1fr);
-  border: 2px solid black;
-  height: 67%;
+  height: 75%;
+}
+
+img {
+  float: right;
+}
+
+.element1__title,
+.element2__title,
+.element3__title,
+.element4__title {
+  padding-left: 10px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.element1__subtitle,
+.element2__subtitle,
+.element3__subtitle,
+.element4__subtitle {
+  padding-left: 10px;
+  font-size: 14px;
+  color: hsla(234, 12%, 34%, 0.5);
+  font-weight: 200;
 }
 
 .element1 {
