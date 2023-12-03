@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,48 +11,51 @@
   </head>
 
   <body>
-    <header>
-      <h1>Reliable, efficient delivery</h1>
-      <h2>Powered by Technology</h2>
-      <h4>
-        Our Artificial Intelligence powered tools use millions of project data
-        
+ <!---- HEADER------->   
+    <header class="container_header">
+      <h1 class="header_title">Reliable, efficient delivery</h1>
+      <h2 class="header_subtitle">Powered by Technology</h2>
+      <h4 class="header_presentation">
+        Our Artificial Intelligence powered tools<br>
+        use millions of project data<br>
         points to ensure that your project is successful
-      </h3>
+      </h4>
     </header>
 
-    <main>
-      <div class="element1">
-        <h3 class="element1__title">Supervisor</h3>
-        <p class="element1__subtitle">
+<!---- CARDS------->  
+    <main class="container_card">
+      <div class="card card--cyan">
+        <h3 class=" card__title">Supervisor</h3>
+        <p class="card__subtitle">
           Monitors activity to identify project roadblocks
         </p>
-        <img src="img/icon-supervisor.svg" alt="Image">
+        <img class="card__image"src="img/icon-supervisor.svg" alt="Image">
       </div>
 
-      <div class="element2">
-        <h3 class="element2__title">Team Builder</h3>
-        <p class="element2__subtitle">
+      <div class="card card--red">
+        <h3 class="card__title">Team Builder</h3>
+        <p class="card__subtitle">
           Scans our talent network to create the
           optimal team for your project
         </p>
-        <img src="img/icon-team-builder.svg" alt="team-builder">
+        <img class="card__image" src="img/icon-team-builder.svg" alt="team-builder">
       </div>
-      <div class="element3">
-        <h3 class="element3__title">Karma</h3>
-        <p class="element3__subtitle">
+
+      <div class="card card--orange">
+        <h3 class="card__title">Karma</h3>
+        <p class="card__subtitle">
           Regularly evaluates our talent to ensure
           quality
         </p>
-        <img src="img/icon-karma.svg" alt="karma">
+        <img  class="card__image" src="img/icon-karma.svg" alt="karma">
       </div>
-      <div class="element4">
-        <h3 class="element4__title">Calculator</h3>
-        <p class="element4__subtitle">
+      <div class="card--blue">
+        <h3 class="card__title">Calculator</h3>
+        <p class="card__subtitle">
           Uses data from past projects to provide
           better delivery estimates
         </p>
-        <img src="img/icon-calculator.svg" alt="calculator">
+        <img class="card__image" src="img/icon-calculator.svg" alt="calculator">
       </div>
     </main>
   </body>

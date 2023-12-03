@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+// ecran telephone 375px-------
+
 body {
   display: flex;
   flex-direction: column;
@@ -6,68 +9,74 @@ body {
   font-size: 15px;
 }
 
-h1 {
+// HEADER ecran 375px-------
+
+.header_title {
   font-size: 26px;
   color: hsl(234, 12%, 34%);
-  font-weight: 400;
-  margin: 40px 0px 0px;
+  font-weight: 200;
+  margin:0px 0px 0px 0px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
+.header_subtitle {
   font-size: 28px;
   color: hsl(235, 86%, 17%);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   font-weight: 600;
-  margin-top: 0px;
+  margin:0px 0px 20px 0px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-h4 {
-  font-size: 16px;
+.header_presentation {
+  font-size: 14px;
   color: hsla(234, 12%, 34%, 0.5);
   font-weight: 200;
-  margin: 0px;
+  margin:0px 0px 0px 0px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-main {
+// CARDS ecran 375px-------
+.container_card {
   display: flex;
   flex-direction: column;
 }
 
-img {
+.card__image {
   float: right;
   padding-right: 10px;
 }
 
-.element1 {
-  border-top: 3px solid hsl(180, 62%, 55%);
-  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
+/* Mixin pour les propriétés de cards*/
+@mixin card-properties($border-color,  $box-shadow-color) {
+  border-top: 3px solid $border-color;
+  box-shadow: 0px 7px 7px $box-shadow-color;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.element2 {
-  border-top: 3px solid hsl(0, 78%, 62%);
-  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+.card--cyan {
+  @include card-properties(hsl(180, 62%, 55%), hsla(212, 86%, 64%, 0.3));
 }
 
-.element3 {
-  border-top: 3px solid hsl(34, 97%, 64%);
-  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+.card--red {
+  @include card-properties(hsl(0, 78%, 62%), hsla(212, 86%, 64%, 0.3));
 }
 
-.element4 {
-  border-top: 3px solid hsl(212, 86%, 64%);
-  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+.card--orange {
+  @include card-properties(hsl(34, 97%, 64%), hsla(212, 86%, 64%, 0.3));
 }
 
-@media screen and (min-width: 375px) and (max-width: 1440px) {
-  body {
-    max-width: 1440px;
-  }
+.card--blue {
+  @include card-properties(hsl(212, 86%, 64%), hsla(212, 86%, 64%, 0.3));
+}
 
-  header {
+
+// GRAND ECRAN-----------
+
+@media screen and (min-width: 375px) and (max-width: 4080px) {
+
+// HEADER GRAND ECRAN-------
+
+.container_header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,59 +84,48 @@ img {
     height: 25%;
   }
 
-main {
+ // CONTAINER GRAND ECRAN-------
+.container_card {
   display: grid;
   grid-template-columns: repeat(29, 1fr);
   grid-template-rows: repeat(16, 1fr);
   height: 75%;
 }
 
-img {
+.card__image {
   float: right;
-  padding-right: 10px;
+  padding: 0pw 10px 10px 0px;
 }
 
-.element1 {
-  grid-column: 4/span 7;
-  grid-row: 5/span 6;
+/* Mixin pour les propriétés de positionnement */
+@mixin card-position($grid-col, $grid-row) {
+  grid-column: $grid-col;
+  grid-row: $grid-row;
+}
+/* Mixin pour les propriétés de style */
+@mixin card-style($border-color) {
+  border-top: 3px solid $border-color;
+  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.element4 {
-  grid-column: 20/span 7;
-  grid-row: 5/span 6;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+.card--cyan {
+  @include card-position(4/span 7, 5/span 6);
+  @include card-style(hsl(180, 62%, 55%));
 }
 
-.element2 {
-  grid-column: 12/span 7;
-  grid-row: 2/span 6;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+.card--blue {
+  @include card-position(20/span 7, 5/span 6);
+  @include card-style(hsl(212, 86%, 64%));
 }
 
-.element3 {
-  grid-column: 12/span 7;
-  grid-row: 9/span 6;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+.card--red {
+  @include card-position(12/span 7, 2/span 6);
+  @include card-style(hsl(0, 78%, 62%));
 }
 
-.element1 {
-  border-top: 3px solid hsl(180, 62%, 55%);
-  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
-}
-
-.element2 {
-  border-top: 3px solid hsl(0, 78%, 62%);
-  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
-}
-
-.element3 {
-  border-top: 3px solid hsl(34, 97%, 64%);
-  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
-}
-
-.element4 {
-  border-top: 3px solid hsl(212, 86%, 64%);
-  box-shadow: 0px 7px 7px hsla(212, 86%, 64%, 0.3);
+.card--orange {
+  @include card-position(12/span 7, 9/span 6);
+  @include card-style(hsl(34, 97%, 64%));
 }
 }
